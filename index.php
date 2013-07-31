@@ -152,7 +152,7 @@ function sendTerm(data1){
 	id_numbers = new Array();
     $.ajax({
        type: "POST",
-       url: "imagesSearcher.php",
+       url: "Back-end/imagesSearcher.php",
        data: { var1: data1 },
        success: function(msg){
 		   id_numbers = JSON.parse(msg);
@@ -173,7 +173,7 @@ function login(){
 function sendLogin(email, password){
     $.ajax({
        type: "POST",
-       url: "login.php",
+       url: "Back-end/login.php",
        data: { userEmail: email, userPassword: password },
        success: function(msg){
          if (msg == "session ready"){

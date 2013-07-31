@@ -10,6 +10,7 @@ $mySQLQuery = "SELECT * FROM usuario WHERE email = '$userEmail' AND pass= '$user
 $retval = mysqli_query($con, $mySQLQuery);
 if (!$retval) {
     echo "Could not successfully run query from DB: " . mysql_error();
+	echo $_SERVER['DOCUMENT_ROOT'];
     //exit;
 }else{
 	$num_rows = $retval->num_rows;

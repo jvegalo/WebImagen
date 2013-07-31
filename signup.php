@@ -131,7 +131,7 @@ function login(){
 function sendLogin(email, password){
     $.ajax({
        type: "POST",
-       url: "login.php",
+       url: "Back-end/login.php",
        data: { userEmail: email, userPassword: password },
        success: function(msg){
          if (msg == "session ready"){

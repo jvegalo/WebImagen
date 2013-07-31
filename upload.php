@@ -81,7 +81,7 @@ if (isset($_SESSION['name'])){
     <hr>
 
       <div class="jumbotron">
-      	<form enctype="multipart/form-data" action="uploader.php" method="POST">
+      	<form enctype="multipart/form-data" action="Back-end/uploader.php" method="POST">
         	<h3>Write the tags of your image separated by commas</h3>
         	<input type="text" class="form-control" name="tagField" placeholder="Enter tags:">
         	<h2>Upload image</h2>
@@ -140,7 +140,7 @@ function login(){
 function sendLogin(email, password){
     $.ajax({
        type: "POST",
-       url: "login.php",
+       url: "Back-end/login.php",
        data: { userEmail: email, userPassword: password },
        success: function(msg){
          if (msg == "session ready"){

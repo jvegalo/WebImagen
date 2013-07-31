@@ -3,7 +3,7 @@
 if(!session_start()) session_start();
 
 include("connection.php");
-include("Back-end/Classes/image.php");
+include("Classes/image.php");
 //get the tags of the image
 $tags=$_REQUEST["tagField"];
 // Where the file is going to be placed 
